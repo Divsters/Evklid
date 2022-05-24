@@ -58,8 +58,8 @@
             Проектные решения любой сложности
           </h1>
           <p class="banner__description hero__description">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов</p>
-          <a href="" class="btn hero__btn banner__btn">
-            <span class="hero__btn btn">
+          <a href="" class="btn banner__btn">
+            <span class="btn hero__btn">
               Заказать расчет
             </span>
           </a>
@@ -78,18 +78,20 @@
           Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
         </p>
         <div class="about__content">
-          <div class="about__col">
-            <img src="IMG/about.jpg" alt="О нас" class="about__img">
-            <div class="about__block">
-              <span class="about__block-description">
-                Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.
-              </span>
-                <a href="" class="about__btn_bgnone btn">
-                  <span class="about__btn">Подробнее</span>
-                </a>
+          <div class="about__col about__col_left">
+            <figure class="about__image">
+                <img src="IMG/about.jpg" alt="О нас" class="about__img">
+                <figcaption class="about__caption">
+                    <span class="about__block-description">
+                      Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.
+                    </span>
+                      <a href="" class="about__btn_bgnone btn">
+                        <span class="about__btn">Подробнее</span>
+                      </a>
+                </figcaption>
+              </figure>
             </div>
-          </div>
-          <div class="about__col">
+          <div class="about__col about__col_right">
             <div class="about__card card">
               <div class="card__pic card__pic_1">
                 <svg width="190" height="165" viewBox="0 0 190 165" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,12 +170,15 @@
             <p class="work__content-description">
               Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,  стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
             </p>
-            <button class="work__btn">
-              Подробнее
-            </button>
-            <button class="work__btn work__btn_transparent">
-              Договор
-            </button>
+            <div class="work__btns">
+              <button class="work__btn">
+                Подробнее
+              </button>
+              <button class="work__btn work__btn_transparent">
+                Договор
+              </button>
+            </div>
+
           </div>
           <div class="work__col">
             <img src="IMG/howwork.jpg" alt="" class="work__img">
@@ -242,7 +247,7 @@
 
   <footer class="footer">
     <div class="container footer__container">
-      <div class="footer__col">
+      <div class="footer__col footer__col_left">
         <img src="IMG/footer__logo.svg" alt="Эвклид" class="footer__logo">
         <nav class="footer__nav">
           <ul class="footer__nav-list">
@@ -256,7 +261,7 @@
               <a href="" class="footer__nav-link">Отзывы</a>
             </li>
             <li class="footer__nav-item">
-              <a href="" class="footer__nav-link">Договор оферрты</a>
+              <a href="" class="footer__nav-link">Договор оферты</a>
             </li>
             <li class="footer__nav-item">
               <a href="" class="footer__nav-link">Договор подряда</a>
@@ -301,20 +306,23 @@
           </li>
         </ul>
       </div>
-      <div class="footer__col">
+      <div class="footer__col footer__col_center">
         <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="form footer__form">
-            <legend>Оставить заявку</legend>
-            <input required type="text" name="name" placeholder="Фамилия, имя, отчество" class="input" id="name">
-            <input required type="email" name="email" placeholder="E-mail" class="input">
-            <input required type="text" name="message" placeholder="Сообщение" class="input">
-            <button type="submit" class="btn btn-submit">
+            <legend class="form__legend">Оставить заявку</legend>
+            <input required type="text" name="name" placeholder="Фамилия, имя, отчество" class="form__input form__input_fio" id="name">
+            <input required type="email" name="email" placeholder="E-mail" class="form__input form__input_email">
+            <textarea required type="text" name="message" placeholder="Сообщение" class="form__input form__input_message"></textarea>
+            <button type="submit" class="btn form__submit">
               Отправить данные
             </button>
-            <input required type="checkbox" name="check">
-            <label for="check">Согласен на обработку данных</label>
+            <span class="form__check">
+              <input required type="checkbox" name="check" class="form__input form__input_check">
+              <label for="check" class="form__label-check">Согласен на обработку данных</label>
+            </span>
+
           </form>
       </div>
-      <div class="footer__col">
+      <div class="footer__col footer__col_right">
         <span class="footer__text">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов. </span>
       </div>
     </div>

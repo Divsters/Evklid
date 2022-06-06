@@ -98,10 +98,11 @@ img {
 }
 
 .container {
-  max-width: 1800px;
+  box-sizing: content-box;
+  max-width: 1770px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
 
 }
 
@@ -414,19 +415,18 @@ img {
   margin-right: 32px;
 }
 
-.about__img {
-  /* width: 100%; */
-  height: 100%;
-  object-fit: cover;
-}
-
 .about__image {
   display: inline-block;
   position: relative;
   margin: 0;
   height: 100%;
   object-fit: cover;
+}
 
+.about__img {
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
 }
 
 .about__caption {
@@ -576,10 +576,6 @@ img {
   flex-direction: row;
 }
 
-.work__col {
-  width: 49.2%;
-}
-
 .work__col:not(:last-child) {
   margin-right: 32px;
 }
@@ -596,6 +592,7 @@ img {
 .work__col {
   display: flex;
   flex-direction: column;
+  width: 49.2%;
 }
 
 .work__content-description {
@@ -678,7 +675,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 110px;
+  min-height: 110px;
   border-top: 1px solid var(--footer-color);
   transition: border-top, border-bottom, .3s ease;
 }
@@ -812,7 +809,6 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -822,7 +818,8 @@ img {
 }
 
 .footer__col_left {
-  margin-right: 133px;
+  max-width: 360px;
+  margin-right: 25px;
 }
 
 .footer__col_center {
@@ -831,6 +828,7 @@ img {
 
 .footer__col_right {
   max-width: 360px;
+  padding-top: 77px;
 }
 
 .footer__logo {
@@ -956,14 +954,22 @@ img {
   background: none;
 }
 
+.form__submit-area {
+  /* display: flex;
+  flex-direction: row;
+  align-items: center; */
+}
+
 .form__submit {
   display: inline-block;
   margin-right: 19px;
+  margin-bottom: 15px;
   padding: 19px 52px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   background: var(--orange-color);
+  border: none;
   transition: background .3s ease;
 }
 
@@ -978,7 +984,7 @@ img {
 }
 
 .form__check {
-  display: inline;
+  display: inline-block;
 }
 
 .form__label-check {

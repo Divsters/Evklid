@@ -79,6 +79,11 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  color: rgb(255, 62, 62);
+  background-color: rgb(253, 255, 139);
+}
+
 html {
   font-family: 'Montserrat';
 }
@@ -316,21 +321,74 @@ img {
 /* hero */
 
 .hero__container {
-
 }
 
-.hero__banner {
+.slider {
+  position: relative;
+  /* min-height: 620px; */
   padding: 100px 80px 100px 80px;
 }
 
-.banner {
-  /* height: 620px; */
-  /* max-width: */
+.swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__swiper {
+  min-height: inherit;
+}
+
+.swiper-slide-1 {
   background-image: url(../IMG/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.swiper-slide-2 {
+  background-image: url(../IMG/hero2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper-slide-3 {
+  background-image: url(../IMG/hero3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 30px;
+}
+
+.btn_round {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.swiper-pagination-bullet:not(:last-of-type) {
+  margin-right: 30px !important;
+}
+
+.banner {
+  pointer-events: none;
+}
+
+.hero__banner {
+  max-width: 837px;
+  position: relative;
+  /* min-height: 620px; */
+  z-index: 2;
+}
+
 
 .hero__heading {
   max-width: 837px;
@@ -340,6 +398,7 @@ img {
   line-height: 85.33px;
   font-weight: 800;
   color: var(--white-color);
+  pointer-events: auto;
 }
 
 .hero__description {
@@ -350,6 +409,7 @@ img {
   line-height: 29.26px;
   color: var(--white-color);
   font-weight: 700;
+  pointer-events: auto;
 }
 
 .hero__btn {
@@ -362,6 +422,7 @@ img {
   outline: none;
   background: var(--orange-color);
   transition: background .3s ease;
+  pointer-events: auto;
 }
 
 .hero__btn:hover,

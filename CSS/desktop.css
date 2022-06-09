@@ -532,6 +532,7 @@ img {
   margin-bottom: 47px;
 }
 
+
 .work__tabs-list {
   display: flex;
   flex-direction: row;
@@ -572,6 +573,10 @@ img {
 }
 
 .work__content {
+  display: none;
+}
+
+.work__content_active {
   display: flex;
   flex-direction: row;
 }
@@ -592,6 +597,7 @@ img {
 .work__col {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 49.2%;
 }
 

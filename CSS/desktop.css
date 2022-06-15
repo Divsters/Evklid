@@ -844,8 +844,7 @@ img {
   border-radius: 0;
 }
 
-.ui-accordion .ui-accordion-header:hover .accordion-title,
-.ui-accordion .ui-accordion-header:focus .accordion-title {
+.ui-accordion .ui-accordion-header:hover .accordion-title {
   color: var(--orange-color);
 }
 
@@ -892,8 +891,7 @@ img {
 }
 
 
-.ui-accordion .ui-accordion-header:hover ellipse,
-.ui-accordion .ui-accordion-header:focus ellipse {
+.ui-accordion .ui-accordion-header:hover ellipse {
   fill: var(--orange-color)
 }
 
@@ -905,8 +903,7 @@ img {
   fill: #ECECEC
 }
 
-.ui-accordion .ui-accordion-header:hover path,
-.ui-accordion .ui-accordion-header:focus path {
+.ui-accordion .ui-accordion-header:hover path{
   fill: var(--white-color)
 }
 
@@ -917,10 +914,27 @@ img {
 
 .ui-accordion .accordion-item .ui-accordion-header {
   border-bottom: none;
+  border-top: none;
+}
+
+.accordion-item {
+  border-top: 1px solid var(--footer-color);
 }
 
 .accordion-item:last-child {
   border-bottom: 1px solid var(--footer-color);
+}
+
+.accordion-item:hover {
+  border-top: 1px solid var(--orange-color);
+}
+
+.accordion-item:hover + .accordion-item {
+  border-top: 1px solid var(--orange-color);
+}
+
+.accordion-item:last-child:hover {
+  border-bottom: 1px solid var(--orange-color);
 }
 
 .ui-accordion .ui-accordion-content {

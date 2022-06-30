@@ -1,0 +1,186 @@
+<section class="section questions">
+    <div class="container questions__container">
+      <h2 class="section-heading questions__heading">
+        Часто задаваемые вопросы
+      </h2>
+      <ul class="questions__list" id="accordion">
+        <li class="questions__item">
+          <h3 class="questions__question-name">Из чего формируется конечная стоимость проекта?</h3>
+          <button class="questions__question-btn">
+            <svg class="questions__more" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+            </svg>
+          </button>
+        </li>
+        <li class="questions__item">
+          <h3 class="questions__question-name">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</h3>
+          <button class="questions__question-btn">
+            <svg class="questions__more" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+            </svg>
+          </button>
+        </li>
+        <li class="questions__item">
+          <h3 class="questions__question-name">Я выбираю между разными компаниями. В чём ваше отличие?</h3>
+          <button class="questions__question-btn">
+            <svg class="questions__more" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+            </svg>
+          </button>
+        </li>
+        <li class="questions__item">
+          <h3 class="questions__question-name">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?</h3>
+          <button class="questions__question-btn">
+            <svg class="questions__more" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+            </svg>
+          </button>
+        </li>
+        <li class="questions__item">
+          <h3 class="questions__question-name">Могу ли я вернуть деньги на каком-либо из этапов работ?</h3>
+          <button class="questions__question-btn">
+            <svg class="questions__more" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z" fill="#666666"/>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+  .questions__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 110px;
+    border-top: 1px solid var(--footer-color);
+    transition: border-top, border-bottom, .3s ease;
+  }
+
+  .questions__item:last-child {
+    border-bottom: 1px solid var(--footer-color);
+  }
+
+  .questions__question-name {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    transition: color .3s ease;
+  }
+
+  .questions__item:focus,
+  .questions__question-name:focus {
+    outline: none;
+  }
+
+  .questions__item:hover .questions__question-name,
+  .questions__item:focus .questions__question-name,
+  .questions__item:focus-within .questions__question-name {
+    color: var(--orange-color);
+  }
+
+  .questions__item:active .questions__question-name {
+    color: var(--text-color)
+  }
+
+  .questions__question-btn {
+    background: none;
+    border: none;
+  }
+
+  .questions__question-btn:focus {
+    outline: none;
+  }
+
+  .questions__question-btn::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .questions__question-btn:active::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .questions__item:hover,
+  .questions__item:focus,
+  .questions__item:focus-within  {
+    border-top: 1px solid var(--orange-color);
+  }
+
+  .questions__item:active {
+    border-top: 1px solid var(--footer-color);
+  }
+
+  .questions__item:hover + .questions__item,
+  .questions__item:focus + .questions__item,
+  .questions__item:focus-within + .questions__item {
+    border-top: 1px solid var(--orange-color);
+  }
+
+  .questions__item:active + .questions__item {
+    border-top: 1px solid var(--footer-color);
+  }
+
+  .questions__item:last-child:hover,
+  .questions__item:last-child:focus,
+  .questions__item:last-child:focus-within {
+    border-bottom: 1px solid var(--orange-color);
+  }
+
+  .questions__item:last-child:active {
+    border-bottom: 1px solid var(--footer-color);
+  }
+
+  .questions__item ellipse,
+  .questions__item path {
+    transition: fill, transform, .3s ease;
+    transform-origin: center;
+  }
+
+  .questions__item:hover ellipse,
+  .questions__item:focus ellipse,
+  .questions__item:focus-within ellipse {
+    fill: var(--orange-color);
+  }
+
+  .questions__item:active ellipse,
+  .questions__item:active path {
+    transform: rotate(45deg);
+  }
+
+  .questions__item:active ellipse {
+    fill: #ECECEC;
+  }
+
+  .questions__item:hover path,
+  .questions__item:focus path,
+  .questions__item:focus-within path {
+    fill: var(--white-color);
+  }
+
+  .questions__item:active path {
+    fill: var(--text-color);
+  }

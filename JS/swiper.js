@@ -24,3 +24,20 @@ document.addEventListener('DOMContentLoaded', function() {
     },
   });
 })
+
+$('.swiper-pagination-bullet').each(function (index) {
+  var bullet = $(this);
+  bullet.attr('id', (index + 1));
+});
+
+$('.swiper-pagination').each(function (){
+  $('.swiper-pagination-bullet').attr('tabindex', 0);
+  $('.swiper-pagination-bullet').on('keydown', function (event){
+      if(event.keyCode == '13'){
+          console.log($(this))
+          var mySwiper = document.querySelector('.swiper-container').swiper;
+          var slideID = $(this).attr('id')
+          mySwiper.slideTo(slideID-1);
+      }
+  })
+})

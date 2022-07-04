@@ -163,6 +163,11 @@ img {
   pointer-events: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
 /* header */
 
 .header {
@@ -252,7 +257,7 @@ img {
   transition: outline .3s ease;
 }
 
-.header__logo:focus {
+.header__logo:focus-visible {
   outline-offset: 5px;
   outline: 3px solid var(--orange-color);
 }
@@ -721,6 +726,11 @@ img {
 }
 
 .work__tabs-btn:focus {
+  color: var(--orange-color);
+}
+
+.work__tabs-btn:focus-visible {
+  color: var(--text-color);
   outline: 1px solid var(--orange-color);
   outline-offset: 5px;
 }
@@ -842,25 +852,15 @@ img {
   position: relative;
 }
 
-/* .accordion-item:focus-visible,
-.accordion-item:focus {
-  outline: none;
-} */
 
-/* .ui-state-focus .accordion-title {
+.ui-state-focus .accordion-title {
   border: none;
   outline: 3px solid var(--orange-color);
-} */
-
-.ui-state-focus {
-  outline-offset: -2px;
-  outline: 3px solid var(--orange-color);
-  background: #666666;
 }
 
-/* .ui-state-default {
+.ui-state-focus {
   outline: none;
-} */
+}
 
 .ui-accordion .ui-accordion-header{
   display: flex;
@@ -919,7 +919,7 @@ img {
   fill: var(--orange-color)
 }
 
-.ui-accordion .ui-accordion-header-active :visited ellipse {
+.ui-accordion .ui-accordion-header-active:visited ellipse {
   fill: #ECECEC ;
 }
 
@@ -943,6 +943,7 @@ img {
 
 .accordion-item {
   border-top: 1px solid var(--footer-color);
+  transition: border-top, border-bottom, .3s ease;
 }
 
 .accordion-item:last-child {
